@@ -1,14 +1,5 @@
 {
   "mcpServers": {
-    "codex": {
-      "args": [
-        "-m",
-        "gpt-5.2-codex",
-        "mcp-server"
-      ],
-      "type": "stdio",
-      "command": "codex"
-    },
     "firecrawl": {
       "type": "http",
       "headers": {
@@ -23,10 +14,13 @@
         "--command",
         "npx -y @upstash/context7-mcp --api-key ctx7sk-6b8f80fb-a995-45eb-b54f-4a2a3be14259"
       ],
-      "env": {},
-      "command": "mise"
+      "command": "mise",
+      "env": {}
     },
     "serena": {
+      "type": "stdio",
+      "command": "uv",
+      "env": {},
       "args": [
         "run",
         "--directory",
@@ -36,11 +30,25 @@
         "--context",
         "claude-code",
         "--project",
-        "C:/Users/inspire/WindowsPathEditor"
-      ],
+        "C:/Projects/windows-path-editor"
+      ]
+    },
+    "codex": {
       "type": "stdio",
-      "env": {},
-      "command": "uv"
+      "command": "codex",
+      "args": [
+        "-m",
+        "gpt-5.4",
+        "mcp-server"
+      ]
+    },
+    "exa": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.exa.ai/mcp?exaApiKey=d404da4f-dbdc-4517-97ed-3d656857e720&tools=web_search_exa,web_search_advanced_exa,get_code_context_exa,crawling_exa,company_research_exa,people_search_exa,deep_researcher_start,deep_researcher_check,deep_search_exa"
+      ]
     }
   }
 }
