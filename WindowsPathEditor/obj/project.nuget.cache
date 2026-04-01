@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "n5I1gJqhtRc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\inspire\\WindowsPathEditor\\WindowsPathEditor\\WindowsPathEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\inspire\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\inspire\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

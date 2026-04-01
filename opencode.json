@@ -1,0 +1,52 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "codex": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "codex",
+        "-m",
+        "gpt-5.2-codex",
+        "mcp-server"
+      ]
+    },
+    "firecrawl": {
+      "enabled": true,
+      "type": "remote",
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer {env:FIRECRAWL_API_KEY}"
+      },
+      "url": "https://mcp.firecrawl.dev/v2/mcp"
+    },
+    "context7": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-6b8f80fb-a995-45eb-b54f-4a2a3be14259"
+      ]
+    },
+    "serena": {
+      "type": "local",
+      "enabled": true,
+      "environment": {},
+      "command": [
+        "uv",
+        "run",
+        "--directory",
+        "C:/Projects/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "claude-code",
+        "--project",
+        "C:/Users/inspire/WindowsPathEditor"
+      ]
+    }
+  }
+}

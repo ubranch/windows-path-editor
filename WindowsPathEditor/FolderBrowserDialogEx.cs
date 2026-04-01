@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Security;
-using System.Security.Permissions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -237,8 +236,6 @@ namespace WindowsPathEditor
         {
             get
             {
-                if ((selectedPath != null) && (selectedPath.Length != 0) && selectedPathNeedsCheck)
-                    new FileIOPermission(FileIOPermissionAccess.PathDiscovery, selectedPath).Demand();
                 return selectedPath;
             }
             set

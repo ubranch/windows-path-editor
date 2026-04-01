@@ -50,7 +50,7 @@ namespace WindowsPathEditor
         public static bool Relaunch(string arguments, bool elevated)
         {
             ProcessStartInfo info = new ProcessStartInfo();
-            info.FileName = Assembly.GetEntryAssembly().GetName().CodeBase;
+            info.FileName = Environment.ProcessPath;
             info.Arguments = arguments;
 
             Debug.Print("Launching {0} {1}", info.FileName, info.Arguments);
