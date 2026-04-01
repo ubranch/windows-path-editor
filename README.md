@@ -2,7 +2,7 @@
 
 A tool for managing your PATH environment variable on Windows.
 
-![screenshot](https://raw.github.com/rix0rrr/WindowsPathEditor/master/screenshot.png)
+![screenshot](screenshot.png)
 
 ## Why
 
