@@ -1,14 +1,14 @@
-# Windows Path Editor
+# windows path editor
 
-A tool for managing your PATH environment variable on Windows.
+a tool for managing your PATH environment variable on windows.
 
 ![screenshot](screenshot.png)
 
-## Why
+## why
 
-On Windows you constantly need to edit your PATH — every tool installs to its own `bin` directory — yet the built-in environment editor gives you a single-line textbox to work with. This app fixes that.
+on windows you constantly need to edit your PATH — every tool installs to its own `bin` directory — yet the built-in environment editor gives you a single-line textbox to work with. this app fixes that.
 
-## Features
+## features
 
 - drag-and-drop reordering of path entries
 - conflict detection between directories (wrong exe or dll being loaded)
@@ -16,28 +16,28 @@ On Windows you constantly need to edit your PATH — every tool installs to its 
 - disk scan to find `bin` directories and add them automatically
 - UAC-aware (elevates when writing to system PATH)
 
-## Requirements
+## requirements
 
-- Windows 10 or later
-- [.NET 8 Desktop Runtime (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- windows 10 or later
+- self-contained build — no runtime installation needed
 
-## Building from source
+## building from source
 
 ```
 dotnet build WindowsPathEditor/WindowsPathEditor.csproj -c Release
 ```
 
-The output exe will be in `WindowsPathEditor/bin/Release/net8.0-windows/`.
+the output exe will be in `WindowsPathEditor/bin/Release/net8.0-windows/`.
 
 ## .NET 8 port
 
-The original project targeted .NET Framework 4.0 and no longer ran on modern Windows. It was ported to .NET 8 and cleaned up using [Claude Code](https://docs.anthropic.com/en/docs/claude-code):
+the original project targeted .NET framework 4.0 and no longer ran on modern windows. it was ported to .NET 8 and cleaned up using [claude code](https://docs.anthropic.com/en/docs/claude-code):
 
-- migrated from .NET Framework 4.0 to .NET 8 (sdk-style project)
+- migrated from .NET framework 4.0 to .NET 8 (sdk-style project)
 - replaced removed APIs (`Assembly.CodeBase`, `FileIOPermission` CAS)
-- replaced Reactive Extensions usage with async/await
+- replaced reactive extensions usage with async/await
 - removed unused dependencies and legacy project files
 
-## Credits
+## credits
 
-Originally created by [Rico Huijbers](https://github.com/rix0rrr).
+originally created by [rico huijbers](https://github.com/rix0rrr).
