@@ -1,6 +1,9 @@
-Debug
-Release
+bin/
+obj/
+Debug/
+Release/
 *.user
 *.suo
 *.sdf
-packages
+packages/
+.vs/

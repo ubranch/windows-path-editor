@@ -1,32 +1,43 @@
-Windows Path Editor
-===================
+# Windows Path Editor
 
-This tool helps you manage your PATH on Windows.
+A tool for managing your PATH environment variable on Windows.
 
-[Download Latest Version (1.7)](https://github.com/rix0rrr/WindowsPathEditor/releases/download/1.7/windowspatheditor-1.7.zip)
+![screenshot](https://raw.github.com/rix0rrr/WindowsPathEditor/master/screenshot.png)
 
-Introduction
------------
+## Why
 
-In a fit of horrible irony, on Windows you'll both have the most need to edit
-your PATH (since all applications insist on creating their own `bin`
-directories instead of installing to a global `bin` directory like on Unices),
-and you're also equipped with the absolute worst tools to deal with this. The
-default environment editor dialog where you get to see 30 characters at once if
-you're lucky? Yuck.
+On Windows you constantly need to edit your PATH — every tool installs to its own `bin` directory — yet the built-in environment editor gives you a single-line textbox to work with. This app fixes that.
 
-*Windows Path Editor* (a horribly creative name, I know) gives you a
-better overview and easier ways to manipulate your path settings.
+## Features
 
-Features
------------
+- drag-and-drop reordering of path entries
+- conflict detection between directories (wrong exe or dll being loaded)
+- one-click removal of broken/bogus entries
+- disk scan to find `bin` directories and add them automatically
+- UAC-aware (elevates when writing to system PATH)
 
-- Edit your path using drag and drop.
-- Detect conflicts between directories on your path (diagnose issues like the
-  wrong executable being launched or the wrong DLL being loaded).
-- Remove bogus entries from your path with a single click.
-- Scan your disk for tools that have a `bin` directory and automatically add
-  them to your path.
-- UAC aware.
+## Requirements
 
-![Screen Shot of Windows Path Editor](https://raw.github.com/rix0rrr/WindowsPathEditor/master/screenshot.png)
+- Windows 10 or later
+- [.NET 8 Desktop Runtime (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
+## Building from source
+
+```
+dotnet build WindowsPathEditor/WindowsPathEditor.csproj -c Release
+```
+
+The output exe will be in `WindowsPathEditor/bin/Release/net8.0-windows/`.
+
+## .NET 8 port
+
+The original project targeted .NET Framework 4.0 and no longer ran on modern Windows. It was ported to .NET 8 and cleaned up using [Claude Code](https://docs.anthropic.com/en/docs/claude-code):
+
+- migrated from .NET Framework 4.0 to .NET 8 (sdk-style project)
+- replaced removed APIs (`Assembly.CodeBase`, `FileIOPermission` CAS)
+- replaced Reactive Extensions usage with async/await
+- removed unused dependencies and legacy project files
+
+## Credits
+
+Originally created by [Rico Huijbers](https://github.com/rix0rrr).

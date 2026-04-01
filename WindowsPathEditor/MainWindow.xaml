@@ -47,7 +47,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
-        <Label Content="Type to search (which)" VerticalAlignment="Center"></Label>
+        <Label Content="Search" VerticalAlignment="Center"></Label>
         <wpe:AutoCompleteBox Height="23" HorizontalAlignment="Stretch" Margin="133,0,10,0" VerticalAlignment="Center" x:Name="searchBox"/>
         <GroupBox Header="System Path"
                   HorizontalAlignment="Stretch"
