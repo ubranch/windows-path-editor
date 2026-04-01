@@ -5,6 +5,9 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <PlatformTarget>x86</PlatformTarget>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <ApplicationIcon>Resources\view_text.ico</ApplicationIcon>
     <AssemblyTitle>Windows Path Editor</AssemblyTitle>
     <Description>Application for easily editing the Windows PATH</Description>
